@@ -1,0 +1,178 @@
+.test
+    border: 1px dotted green
+
+// Responsive nav and page container
+.container
+    max-width: 100%
+    margin: 0 $gap
+    @include mq(xl)
+        max-width: $full-width
+        margin: 0 auto
+
+.nav-container
+    max-width: 100%
+    margin: 0 $gap
+    @include mq(xxl)
+        max-width: $nav-width
+        margin: 0 auto
+
+// Align items
+.align-center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+
+.align-center-horizontal
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+
+.align-center-vertical
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+
+.margin-center
+    width: 100%
+    margin: 0 auto
+
+// Z-Index
+@for $i from 1 to 11
+    .z-#{$i}
+        z-index: $i * 10
+
+// Display
+.display-none
+    display: none
+
+.display-block
+    display: block
+
+.inline-block
+    display: inline-block
+
+.inline
+    display: inline
+
+// Flexbox
+.flex
+    display: flex
+
+.flex-row
+    flex-direction: row
+
+.flex-justify-center
+    justify-items: center
+
+.flex-align-center
+    align-items: center
+
+.flex-center
+    justify-content: center
+    align-items: center
+
+.flex-between
+    justify-content: space-between
+
+// Positions
+.relative
+    position: relative
+
+.absolute
+    position: absolute
+
+.fixed
+    position: fixed
+
+// Full screen
+.full-screen
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100vw
+
+.full-width
+    width: 100%
+
+// Scaled height, width, padding, margin etc
+@for $i from 0 to 10
+
+    .height-#{$i}
+        height: $i * $gap
+    .width-#{$i}
+        width: $i * $gap
+
+    .top-#{$i}
+        top: $i * $gap
+    .bottom-#{$i}
+        bottom: $i * $gap
+    .left-#{$i}
+        left: $i * $gap
+    .right-#{$i}
+        right: $i * $gap
+
+    .margin-#{$i}
+        margin: $i * $gap
+    .margin-top-#{$i}
+        margin-top: $i * $gap
+    .margin-bottom-#{$i}
+        margin-bottom: $i * $gap
+    .margin-left-#{$i}
+        margin-left: $i * $gap
+    .margin-right-#{$i}
+        margin-right: $i * $gap
+
+    .padding-#{$i}
+        padding: $i * $gap
+    .padding-top-#{$i}
+        padding-top: $i * $gap
+    .padding-bottom-#{$i}
+        padding-bottom: $i * $gap
+    .padding-left-#{$i}
+        padding-left: $i * $gap
+    .padding-right-#{$i}
+        padding-right: $i * $gap
+
+// Small amount of the same
+.top-small
+    top: calc(0.5*#{$gap})
+
+.left-small
+    left: calc(0.5*#{$gap})
+
+.right-small
+    right: calc(0.5*#{$gap})
+
+.bottom-small
+    bottom: calc(0.5*#{$gap})
+
+.padding-small
+    padding: calc(0.5*#{$gap})
+
+.padding-left-small
+    padding-left: calc(0.5*#{$gap})
+
+.padding-right-small
+    padding-right: calc(0.5*#{$gap})
+
+.padding-top-small
+    padding-top: calc(0.5*#{$gap})
+
+.padding-bottom-small
+    padding-bottom: calc(0.5*#{$gap})
+
+.margin-small
+    margin: calc(0.5*#{$gap})
+
+.margin-left-small
+    margin-left: calc(0.5*#{$gap})
+
+.margin-right-small
+    margin-right: calc(0.5*#{$gap})
+
+.margin-top-small
+    margin-top: calc(0.5*#{$gap})
+
+.margin-bottom-small
+    margin-bottom: calc(0.5*#{$gap})

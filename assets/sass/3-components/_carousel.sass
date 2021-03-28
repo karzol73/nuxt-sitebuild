@@ -1,0 +1,63 @@
+// Configure the item box size
+.product-items
+    height: 10rem
+    width: 240px
+
+// Responsive img size depends on the box size
+.products-img
+    height: 60%
+    width: auto
+
+// ----------------------
+// Configure Slick Slider
+// ----------------------
+.slick-list
+    width: 100%
+    @include mq(lg)
+        width: 92%
+
+.slick-slide
+    cursor: pointer
+    padding-right: $gap
+    width: 240px
+    height: 10rem
+
+// Remove outline before slides!!
+.slick-slider
+    div
+        &:focus
+            outline: 0
+
+// Remove prev btn  
+.slick-prev
+    display: none !important
+
+// Custom next btn
+.slick-next
+    position: absolute
+    top: 0
+    right: 0
+    height: 10rem
+    width: 0
+    font-size: 0
+    border: 0 solid transparent
+    outline: 0
+    background: $color-gray-100
+    transition: $transition-time
+    &::after
+        content: ""
+        display: inline-block
+        width: calc(3*#{$gap})
+        height: calc(3*#{$gap})
+        background: url('~@/assets/img/next.svg') no-repeat
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        margin-left: 3px
+    &:hover
+        background: $color-gray-300
+
+@include mq(lg)
+    .slick-next
+        width: 8%

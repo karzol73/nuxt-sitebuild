@@ -1,0 +1,30 @@
+// This follows the given layout
+.info-container
+    background: $color-gray-100
+    padding: calc(2 * #{$gap}) calc(1.5 * #{$gap})
+    @include mq(md)
+        padding: calc(2 * #{$gap}) calc(3 * #{$gap})
+    @include mq(lg)
+        background: $color-white
+        padding: $gap
+
+    &:nth-child(odd)
+        background: $color-gray-200
+        @include mq(lg)
+            background: $color-white
+
+    &:after
+        content: ""
+        display: table
+        clear: both
+
+.info-column
+    float: none
+    width: 100%
+    @include mq(lg)
+        float: left
+        width: 50%
+
+        &:nth-child(2)
+            padding-left: calc(3 * #{$gap})
+            padding-right: calc(2 * #{$gap})

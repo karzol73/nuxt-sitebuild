@@ -1,0 +1,26 @@
+$sm: 640px !default
+$md: 768px !default
+$lg: 1024px !default // 1024px
+$xl: 1472px !default // 1280px
+$xxl: 1682px !default // 1536px
+
+@mixin mq($point)
+    @if $point == sm
+        @media only screen and (min-width: $sm)
+            @content
+
+    @if $point == md
+        @media only screen and (min-width: $md)
+            @content
+
+    @if $point == lg
+        @media only screen and (min-width: $lg)
+            @content
+
+    @if $point == xl
+        @media only screen and (min-width: $xl)
+            @content
+
+    @else if $point == xxl
+        @media only screen and (min-width: $xxl)
+            @content

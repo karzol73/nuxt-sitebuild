@@ -1,0 +1,71 @@
+.compare-container
+    width: 100%
+    flex-wrap: nowrap
+    overflow-x: auto
+    white-space: nowrap
+    @include mq(lg) // at mobile menu breakpoint
+        flex-wrap: wrap
+        white-space: normal
+
+.compare-box
+    white-space: normal
+    flex: 0 0 auto
+    width: 280px // old mobile phones
+    width: 75vw
+    padding: calc(2 * #{$gap}) $gap
+    @media only screen and (min-width: 376px) // old mobile phones
+        width: 360px // old mobile phones
+        width: 75vw
+    @include mq(sm)
+        width: 460px // old mobile phones
+        width: 75vw
+        padding: calc(1.5 * #{$gap})
+    @include mq(md)
+        width: 530px // old mobile phones
+        width: 75vw
+        padding: calc(4 * #{$gap}) calc(3 * #{$gap})
+    @include mq(lg) // at mobile menu breakpoint
+        flex: 1 1 auto
+        width: 49%
+    &:first-child
+        margin-right: $gap
+    p
+        margin-right: 0
+        @include mq(xl)
+            margin-right: 8rem
+
+.compare-img
+    height: 90%
+    width: 90%
+    @include mq(md)
+        height: 75%
+        width: 75%
+
+.vs-icon
+    position: absolute
+    height: calc(4 * #{$gap})
+    width: calc(4 * #{$gap})
+    top: 150px
+    right: calc(-2.5 * #{$gap})
+    border-radius: 50%
+    @include mq(md)
+        height: calc(6 * #{$gap})
+        width: calc(6 * #{$gap})
+        top: 350px
+        right: calc(-3.5 * #{$gap})
+        border-radius: 50%
+
+.vs-icon-text
+    font-size: 2.4rem
+    margin-top: -0.35rem // correct the font kerner
+    @include mq(md)
+        font-size: 3.4rem
+        margin-top: -0.35rem // correct the font kerner
+
+// Hide scrollbar under the scrollable container
+.compare-container
+    -ms-overflow-style: none  // IE and Edge
+    scrollbar-width: none  // in Firefox
+
+    &::-webkit-scrollbar // hide scrollbar in Chrome, Safari, and Opera
+        display: none
