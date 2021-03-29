@@ -1,4 +1,4 @@
-# tech-challenge
+# simple nuxt sitebuld
 
 ## Build Setup
 
