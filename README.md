@@ -1,4 +1,4 @@
-# simple nuxt sitebuld
+# nuxt sitebuld
 
 ## Build Setup
 
